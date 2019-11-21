@@ -22,7 +22,7 @@
     background-repeat: no-repeat;
     background-size: 100px;
     background-position: center;
-    background-color: rgb(230, 230, 230, 0.1);
+    background-color: rgba(230, 230, 230, 0.1);
     border: 1px dotted #eee;
     cursor: pointer;
     box-sizing: border-box;
@@ -40,7 +40,7 @@
     border:0px;
     padding:0px;
     z-index:8000;
-    
+
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -137,7 +137,7 @@
     0% { transform: translateX(-100%); }
     100% { -webkit-transform: translateX(0%); }
 }
-    
+
 @keyframes slide-left-out {
     0% { transform: translateX(0%); }
     100% { transform: translateX(-100%); }
@@ -159,7 +159,7 @@
     0% { transform: translateX(100%); }
     100% { -webkit-transform: translateX(0%); }
 }
-    
+
 @keyframes slide-right-out {
     0% { transform: translateX(0%); }
     100% { transform: translateX(100%); }
@@ -180,7 +180,7 @@
     0% { transform: translateY(-100%); }
     100% { -webkit-transform: translateY(0%); }
 }
-    
+
 @keyframes slide-top-out {
     0% { transform: translateY(0%); }
     100% { transform: translateY(-100%); }
@@ -201,7 +201,7 @@
     0% { transform: translateY(100%); }
     100% { -webkit-transform: translateY(0%); }
 }
-    
+
 @keyframes slide-bottom-out {
     0% { transform: translateY(0%); }
     100% { transform: translateY(100%); }
@@ -251,7 +251,7 @@
  * Author: paul.hodel@gmail.com
  * https://github.com/paulhodel/jtools
  */
- 
+
 .jcalendar {
     position:relative;
     z-index:9000;
@@ -340,7 +340,7 @@
 }
 
 .jcalendar-weekday {
-    font-weight:550;
+    font-weight:500;
     background-color:#fcfcfc;
     padding:14px;
 }
@@ -356,7 +356,7 @@
 
 .jcalendar-months td, .jcalendar-years td {
     height:24px;
-} 
+}
 
 .jcalendar-input {
     padding-right:18px;
@@ -367,9 +367,9 @@
 }
 
 .jcalendar-done {
-    -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.39);
-    -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.39);
-    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.39);
+    -webkit-box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.39);
+    -moz-box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.39);
+    box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.39);
     background-color:#fff;
 }
 
@@ -384,7 +384,7 @@
 .jcalendar select {
     width:55px;
     display:inline-block;
-    border:0px;
+    border:0;
     padding:4px;
     text-align:center;
     font-size:1.1em;
@@ -404,7 +404,7 @@
 .jcalendar-reset, .jcalendar-confirm {
     text-transform:uppercase;
     cursor:pointer;
-    color: var(--active-color);
+    color: #007aff; /*var(--active-color)*/
 }
 
 .jcalendar-controls {
@@ -434,16 +434,16 @@
 .jcalendar-fullsize  {
     position:fixed;
     width:100%;
-    top:0px;
-    left:0px;
+    top:0;
+    left:0;
 }
 
 .jcalendar-fullsize .jcalendar-content
 {
     position:fixed;
     width:100%;
-    left:0px;
-    bottom:0px;
+    left:0;
+    bottom:0;
 }
 
 .jcalendar-focus.jcalendar-fullsize .jcalendar-backdrop {
@@ -499,7 +499,7 @@
  * Author: paul.hodel@gmail.com
  * https://github.com/paulhodel/jsuites
  */
- 
+
 .jcontextmenu {
     position:fixed;
     z-index:10000;
@@ -510,14 +510,14 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
-    -webkit-box-shadow: 2px 2px 2px 0px rgba(143, 144, 145, 1);
-    -moz-box-shadow: 2px 2px 2px 0px rgba(143, 144, 145, 1);
-    box-shadow: 2px 2px 2px 0px rgba(143, 144, 145, 1);
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(143, 144, 145, 1);
+    -moz-box-shadow: 2px 2px 2px 0 rgba(143, 144, 145, 1);
+    box-shadow: 2px 2px 2px 0 rgba(143, 144, 145, 1);
     border: 1px solid #C6C6C6;
-    padding: 0px;
+    padding: 0;
     padding-top:4px;
     padding-bottom:4px;
-    margin:0px;
+    margin:0;
     outline:none;
     display:none;
 }
@@ -571,7 +571,7 @@
  * Author: paul.hodel@gmail.com
  * https://github.com/paulhodel/jtools
  */
- 
+
 .jdialog
 {
     position:fixed;
@@ -629,7 +629,7 @@
 {
     border-top:1px solid #ccc;
     display: flex;
-    flex-wrap:row wrap;
+    flex-flow: row wrap;
     align-content: stretch;
     align-items:center;
     text-align:center;
@@ -644,15 +644,15 @@
 }
 .jdialog .jdialog-footer > div:first-child
 {
-    border-left:0px;
+    border-left:0;
 }
 
 .jdialog .jdialog-footer input
 {
-    border:0px;
-    margin:0px;
+    border:0;
+    margin:0;
     background-color:transparent;
-    color:var(--active-color);
+    color:#007aff; /*var(--active-color)*/
     width:100%;
     outline:none;
 }
@@ -687,13 +687,13 @@
 .jdropdown-backdrop
 {
     position:fixed;
-    top:0px;
-    left:0px;
+    top:0;
+    left:0;
     min-width:100%;
     min-height:100%;
     background-color:rgba(0,0,0,0.5);
-    border:0px;
-    padding:0px;
+    border:0;
+    padding:0;
     z-index:8000;
     display:none;
 }
@@ -715,8 +715,8 @@
 
 .jdropdown-container-header
 {
-    padding:0px;
-    margin:0px;
+    padding:0;
+    margin:0;
     position:relative;
 }
 
@@ -753,7 +753,7 @@
 {
     display:none;
     font-size:1em;
-    color: var(--active-color);
+    color: #007aff; /*var(--active-color)*/
     text-transform:uppercase;
     text-align:right;
     padding:10px;
@@ -764,7 +764,7 @@
 .jdropdown-content
 {
     min-width:inherit;
-    margin:0px;
+    margin:0;
     box-sizing:border-box;
 }
 
@@ -835,7 +835,7 @@
 {
     min-width:inherit;
     border:1px solid #8fb1e3;
-    margin:0px;
+    margin:0;
     background-color:#fff;
     box-sizing:border-box;
     min-height:10px;
@@ -907,9 +907,9 @@
 
 .jdropdown-picker .jdropdown-header
 {
-    border:0px;
-    padding:0px;
-    margin:0px;
+    border:0;
+    padding:0;
+    margin:0;
     outline:none;
     text-transform:uppercase;
     font-size:1em;
@@ -919,8 +919,8 @@
 .jdropdown-picker .jdropdown-container
 {
     position:fixed;
-    bottom:0px;
-    left:0px;
+    bottom:0;
+    left:0;
     border-bottom:1px solid #e6e6e8;
     width:100%;
     background-color:#fff;
@@ -930,9 +930,9 @@
 
 .jdropdown-picker .jdropdown-close
 {
-    -webkit-box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.39);
-    -moz-box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.39);
-    box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.39);
+    -webkit-box-shadow: 0 -1px 5px 0 rgba(0,0,0,0.39);
+    -moz-box-shadow: 0 -1px 5px 0 rgba(0,0,0,0.39);
+    box-shadow: 0 -1px 5px 0 rgba(0,0,0,0.39);
     background-color:#fff;
     display:block;
 }
@@ -1000,11 +1000,11 @@
 .jdropdown-searchbar.jdropdown-focus
 {
     position:absolute;
-    top:0px;
-    left:0px;
+    top:0;
+    left:0;
     min-height:100%;
     background-color:#fafafa;
-    padding:0px;
+    padding:0;
     padding-top:40px !important;
     z-index:9001;
 }
@@ -1015,8 +1015,8 @@
     background-color:#fff;
     box-shadow: 0 1px 2px rgba(0,0,0,.1);
     position:fixed;
-    top:0px;
-    left:0px;
+    top:0;
+    left:0;
     width:100%;
 }
 
@@ -1037,9 +1037,9 @@
 
 .jdropdown-searchbar .jdropdown-header
 {
-    border:0px;
-    padding:0px;
-    margin:0px;
+    border:0;
+    padding:0;
+    margin:0;
     outline:none;
     text-transform:uppercase;
     font-size:1em;
@@ -1049,8 +1049,8 @@
 .jdropdown-searchbar .jdropdown-close
 {
     position:fixed;
-    top:0px;
-    right:0px;
+    top:0;
+    right:0;
 }
 
 .jdropdown-searchbar .jdropdown-content
@@ -1106,7 +1106,7 @@
 .jdropdown-searchbar .jdropdown-description {
     text-overflow: ellipsis;
     overflow: hidden;
-    max-width:calc(100%-20px);
+    max-width:calc(100% - 20px);
 }
 
 .jdropdown-searchbar .jdropdown-content > .jdropdown-item:first-child
@@ -1172,8 +1172,8 @@
     .jdropdown-list
     {
         width:100% !important;
-        border:0px;
-        padding:0px;
+        border:0;
+        padding:0;
     }
 
     .jdropdown-list .jdropdown-container
@@ -1216,7 +1216,6 @@
 
 .jeditor-toolbar {
     cursor: pointer;
-    display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -1227,7 +1226,7 @@
     border-radius: 2px;
     -webkit-box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.2);
     box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.2);
-    margin: 0px;
+    margin: 0;
     margin-bottom:5px;
     padding: 5px;
     white-space: nowrap;
@@ -1254,17 +1253,17 @@
     height:20px;
     line-height:20px;
     color:#777;
-    
+
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
-    user-select: none;          /* Likely future */   
+    user-select: none;          /* Likely future */
 }
 
 .jeditor-toolbar select {
-    border:0px;
+    border:0;
     background-color:transparent;
-    padding:0px;
+    padding:0;
     padding-left:5px;
     padding-right:5px;
     display:block;
@@ -1277,7 +1276,7 @@
 .jeditor-toolbar .jtoolbar-divisor {
     width:2px;
     heigh:28px;
-    padding:0px;
+    padding:0;
     margin:4px;
     background-color:#f2f2f2;
 }
@@ -1316,7 +1315,7 @@
 
 .jeditor-thumbs .close i {
     color:#fff;
-    text-shadow: 0px 0px 2px #000;
+    text-shadow: 0 0 2px #000;
     position:relative;
     top:5px;
     left:72px;
@@ -1416,7 +1415,7 @@
     width:24px;
     height:24px;
     cursor:pointer;
-    text-shadow: 0px 0px 5px #fff;
+    text-shadow: 0 0 5px #fff;
 }
 
 .snippet div, .snippet img {
@@ -1512,8 +1511,8 @@
 
 .jlogin-fullscreen {
     position:absolute;
-    top:0px;
-    left:0px;
+    top:0;
+    left:0;
     width:100%;
     height:100%;
     background-color:#fff;
@@ -1538,7 +1537,7 @@
     width:100%;
     outline:none;
     padding:15px;
-    margin:0px;
+    margin:0;
 }
 
 .jlogin input[type='checkbox'] {
@@ -1603,7 +1602,7 @@
 .jlogin .requestButton, .jlogin .cancelButton, .jlogin .newProfileButton
 {
     padding:20px;
-    padding-bottom:0px;
+    padding-bottom:0;
     text-align:center;
     cursor:pointer;
 }
@@ -1633,7 +1632,7 @@
 }
 
 :root {
-    --active-color:#007aff;
+    /*--active-color:#007aff;*/
 }
 
 @media only screen and (max-device-width : 800px)
@@ -1648,8 +1647,8 @@
     }
 
     body {
-        margin:0px;
-        padding:0px;
+        margin:0;
+        padding:0;
         width:100%;
         height:100%;
         min-height:100%;
@@ -1677,8 +1676,8 @@
     color:#fff;
     padding:2px;
     position:fixed;
-    top:0px;
-    left:0px;
+    top:0;
+    left:0;
     z-index:20000;
     width:100%;
     font-size:0.55em;
@@ -1688,22 +1687,22 @@
 /*
 .app .activeHighLight
 {
-    color:var(--active-color);
+    color:#007aff;
 }
 
 .app .active a, .app .active span, .app .active i
 {
-    color:var(--active-color);
+    color:#007aff;
 }
 
 .app .no-padding
 {
-    padding:0px;
+    padding:0;
 }
 
 .app .action
 {
-    color:var(--active-color);
+    color:#007aff;
     cursor:pointer;
 }
 
@@ -1711,7 +1710,7 @@
 .app i.action
 {
     position:absolute;
-    right:0px;
+    right:0;
     margin-right:15px;
     cursor:pointer;
 }
@@ -1721,8 +1720,8 @@
 {
     border-radius:4px;
     width:100%;
-    border-color:1px solid var(--active-color);
-    color:var(--active-color);
+    border-color:#007aff;
+    color:#007aff;
     background-color:transparent;
     padding:4px;
     outline:none;
@@ -1730,19 +1729,19 @@
 
 .app button:active
 {
-    border-color:1px solid #000;
+    border-color: #000;
     color:#000;
 }
 
 .app .red
 {
     color:red;
-    border-color:1px solid red;
+    border-color: red;
 }
 
 .app .link
 {
-    color:var(--active-color);
+    color:#007aff; /*var(--active-color)*/
     cursor:pointer;
 }
 
@@ -1826,7 +1825,7 @@
 }
 
 .app .navbar .icon {
-    color:var(--active-color);
+    color:#007aff; /*var(--active-color)*/
 }
 
 .app .title {
@@ -1860,7 +1859,7 @@
 
 .app .block-border {
     border-top:1px solid #ddd;
-    border-bottom:1px solid #ddd; 
+    border-bottom:1px solid #ddd;
 }
 
 .app .block-footer {
@@ -1910,14 +1909,14 @@
 
 .app .progressbar-container {
     margin: 15px;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
     margin-top: 5px;
 }
 
 .app .progressbar {
     width:100%;
-    border:1px solid var(--active-color);
+    border:1px solid #007aff; /*var(--active-color)*/
     border-radius:1px;
 }
 
@@ -1929,7 +1928,7 @@
 }
 
 .app .progressbar div {
-    background-color:var(--active-color);
+    background-color:#007aff; /*var(--active-color)*/
     height:4px;
     width:0%;
 }
@@ -1951,12 +1950,12 @@
 }
 
 .app .panel-left {
-    -webkit-box-shadow: 0px 2px 15px -5px rgba(0, 0, 0, 0.7);
-    box-shadow: 0px 2px 15px -5px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 2px 15px -5px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 2px 15px -5px rgba(0, 0, 0, 0.7);
 }
 
 .app .panel a {
-    color:var(--active-color);
+    color:#007aff; /*var(--active-color)*/
 }
 
 /** Toolbar **/
@@ -2024,7 +2023,7 @@
 .app .jtoolbar .selected i,
 .app .jtoolbar .selected span
 {
-    color:var(--active-color);
+    color:#007aff; /*var(--active-color)*/
 }
 
 
@@ -2071,7 +2070,7 @@
 
 .app .options .option:last-child
 {
-    border-bottom:0px;
+    border-bottom:0;
 }
 
 .app .options label
@@ -2084,8 +2083,8 @@
     outline:none;
     border:1px solid transparent;
     font-size:1em;
-    margin:0px;
-    padding:0px;
+    margin:0;
+    padding:0;
     width:100%;
     box-sizing:border-box;
 }
@@ -2119,10 +2118,10 @@
 
 .app .options .option .jdropdown
 {
-     border-top: 0px solid #e6e6e8;
-    border-bottom: 0px solid #e6e6e8;
-    padding-top: 0px;
-    padding-bottom: 0px;
+     border-top: 0 solid #e6e6e8;
+    border-bottom: 0 solid #e6e6e8;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .app .options .icon {
@@ -2137,7 +2136,7 @@
 .app .options .option .option-actions {
     display:flex;
     transform: translateX(100%);
-    width:0px;
+    width:0;
 }
 
 .app .options .option .option-actions > div {
@@ -2204,7 +2203,7 @@
 .app .options .option-link:after {
     content:'\e315';
     font-family: 'material icons';
-    color:var(--active-color);
+    color:#007aff; /*var(--active-color)*/
     font-size:24px;
     margin-right:10px;
     float:right;
@@ -2350,7 +2349,7 @@
 
 /** Picker **/
 
-.app .picker 
+.app .picker
 {
     background-color:#fff;
     border-top:1px solid #e6e6e8;
@@ -2358,7 +2357,7 @@
     padding-left:15px;
     margin-top:10px;
     position:absolute;
-    bottom:0px;
+    bottom:0;
     width:100%;
     z-index:700;
 }
@@ -2395,14 +2394,14 @@
 /** Topsearch **/
 
 .app .top-search {
-    margin:0px;
+    margin:0;
     padding:10px;
-    border-bottom:1px solid #ddd; 
+    border-bottom:1px solid #ddd;
 }
 
 .app .top-search input {
     background-color: #e6e6e6;
-    border: 0px;
+    border: 0;
     border-radius: 4px;
     outline: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='gray'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
@@ -2453,8 +2452,8 @@
     cursor:pointer;
     border-radius:24px;
     margin-top:-10px;
-    border:0px;
-    box-shadow:0px 1px 3px 1px #bbb;
+    border:0;
+    box-shadow:0 1px 3px 1px #bbb;
 }
 
 .app .range::-moz-range-track
@@ -2473,8 +2472,8 @@
     background:#fff;
     cursor:pointer;
     border-radius:24px;
-    border:0px;
-    box-shadow:0px 1px 3px 1px #bbb;
+    border:0;
+    box-shadow:0 1px 3px 1px #bbb;
 }
 
 .app .range::-ms-track
@@ -2507,8 +2506,8 @@
     background:#fff;
     cursor:pointer;
     border-radius:24px;
-    border:0px;
-    box-shadow:0px 1px 3px 1px #bbb;
+    border:0;
+    box-shadow:0 1px 3px 1px #bbb;
 }
 
 .app .range:focus::-ms-fill-lower
@@ -2581,15 +2580,15 @@
 }
 .jactionsheet .jactionsheet-group > div:first-child
 {
-    border-top:0px;
+    border-top:0;
 }
 
 .jactionsheet .jactionsheet-group input
 {
-    border:0px;
-    margin:0px;
+    border:0;
+    margin:0;
     background-color:transparent;
-    color:var(--active-color);
+    color:#007aff; /*var(--active-color)*/
     width:100%;
     outline:none;
     font-size:1em;
@@ -2675,22 +2674,22 @@
 
 .app .options input::-webkit-input-placeholder
 {
-    text-tranform:uppercase;
+    text-transform:uppercase;
 }
 
 .app .options input::-moz-placeholder
 {
-    text-tranform:uppercase;
+    text-transform:uppercase;
 }
 
 .app .options input:-ms-input-placeholder
 {
-    text-tranform:uppercase;
+    text-transform:uppercase;
 }
 
 .app .options input:-moz-placeholder
 {
-    text-tranform:uppercase;
+    text-transform:uppercase;
 }
 
 ::placeholder
@@ -2762,7 +2761,7 @@
     max-height:100%;
 }
 .jmodal.no-title {
-    padding-top:0px;
+    padding-top:0;
 }
 
 .jmodal.no-title:before {
@@ -2780,7 +2779,7 @@
     width:24px;
     height:24px;
     cursor:pointer;
-    text-shadow: 0px 0px 5px #fff;
+    text-shadow: 0 0 5px #fff;
 }
 
 .jnotification {
@@ -2792,8 +2791,8 @@
 }
 
 .jnotification-container {
-    -webkit-box-shadow: 0px 2px 15px -5px rgba(0, 0, 0, 0.7);
-    box-shadow: 0px 2px 15px -5px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 2px 15px -5px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 2px 15px -5px rgba(0, 0, 0, 0.7);
     padding:12px;
     border-radius: 12px;
 }
@@ -2840,18 +2839,18 @@
 
 @media (min-width: 320px) and (max-width: 800px) {
     .jnotification {
-        top: 0px;
+        top: 0;
         width: 100%;
     }
     .jnotification-container {
-        background: rgb(255,255,255,0.95);
+        background: rgba(255,255,255,0.95);
         border: 1px solid #eee;
     }
 }
 
 @media (min-width: 801px) {
     .jnotification {
-        bottom: 0px;
+        bottom: 0;
     }
     .jnotification-container {
         backgroun-color: #000;
@@ -2928,7 +2927,7 @@
     left:15px;
     font-family:'Material Icons';
     font-size:30px;
-    text-shadow: 0px 0px 0px #000;
+    text-shadow: 0 0 0 #000;
 }
 
 .jslider-right::after {
@@ -2938,7 +2937,7 @@
     right:10px;
     font-family:'Material Icons';
     font-size:30px;
-    text-shadow: 0px 0px 0px #000;
+    text-shadow: 0 0 0 #000;
     text-align:center;
 }
 
@@ -2961,7 +2960,7 @@
     width: 100%;
     min-height:100%;
     z-index:2000;
-    margin:0px;
+    margin:0;
     box-sizing:border-box;
 
     background-color:rgba(0,0,0,0.9);

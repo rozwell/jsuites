@@ -1275,7 +1275,7 @@
 
 .jeditor-toolbar .jtoolbar-divisor {
     width:2px;
-    heigh:28px;
+    height:28px;
     padding:0;
     margin:4px;
     background-color:#f2f2f2;
@@ -1426,10 +1426,10 @@
     user-select: none;
 
     -webkit-user-drag: none;
-    -khtml-user-drag: none;
-    -moz-user-drag: none;
-    -o-user-drag: none;
-    user-drag: none;
+    /*-khtml-user-drag: none;*/
+    /*-moz-user-drag: none;*/
+    /*-o-user-drag: none;*/
+    /*user-drag: none;*/
 }
 
 .jeditor img {
@@ -2437,7 +2437,7 @@
     width: 100%;
     height: 4px;
     cursor: pointer;
-    animate: 0.2s;
+    animation-duration: 0.2s;
     background: #ccc;
     border-radius: 1.3px;
 }
@@ -2460,7 +2460,7 @@
 {
     width:100%;
     cursor:pointer;
-    animate:0.2s;
+    animation-duration:0.2s;
     background:#ccc;
     border-radius:1.3px;
 }
@@ -2480,7 +2480,7 @@
 {
     width: 100%;
     cursor: pointer;
-    animate: 0.2s;
+    animation-duration: 0.2s;
     background: transparent;
     border-color: transparent;
     border-width: 16px 0;
@@ -2853,7 +2853,6 @@
         bottom: 0;
     }
     .jnotification-container {
-        backgroun-color: #000;
         background: rgb(92,92,92);
         background: linear-gradient(0deg, rgba(92,92,92,1) 0%, rgba(77,77,77,1) 100%);
         color: #fff;
